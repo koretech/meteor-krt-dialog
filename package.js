@@ -3,24 +3,24 @@ var client = 'client', server = 'server', both = ['client', 'server'];
 Package.describe({
 	name: 'krt:dialog',
 	summary: 'Koretech Dialog Package',
-	version: '0.1.0',
+	version: '0.1.1',
 	git: 'https://github.com/koretech/meteor-krt-dialog.git'
 });
 
 Package.onUse(function(api){
 
-	api.versionsFrom('METEOR@0.9.4');
+	api.versionsFrom('METEOR@1.0');
 
 	api.use([
 		'krt:core@0.1.0',
 		'templating',
 		'underscore',
-		'nooitaf:semantic-ui-less@0.19.3'
+		'nooitaf:semantic-ui@1.0.1'
 	], both);
 
 	api.imply([
-		'krt:core@0.1.0',
-		'nooitaf:semantic-ui-less'
+		'krt:core',
+		'nooitaf:semantic-ui'
 	]);
 
 	api.addFiles([
